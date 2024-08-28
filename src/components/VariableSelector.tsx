@@ -77,8 +77,8 @@ export function VariableSelector() {
     }
 
     // don't do to many steps
-    const stepCountX = (maxX - minX) / stepSizeX;
-    const stepCountY = (maxY - minY) / stepSizeY;
+    const stepCountX = ((maxX as number) - (minX as number)) / (stepSizeX as number);
+    const stepCountY = ((maxY as number) - (minY as number)) / (stepSizeY as number);
 
     if (stepCountX > 30 || stepCountY > 30) {
       setGcodeResult('Stepsize too small, too many steps');

@@ -122,7 +122,7 @@ export class XvsYPatternGenerator {
     return this.getFSizeForSizeRec(text, size, max, fSize);
   }
 
-  static getVariableValue(type: Variable, valX: number, valY: number, freeVariableValue: number, typeX: Variable, typeY: Variable): number {
-    return typeX === type ? valX : typeY === type ? valY : freeVariableValue;
+  static getVariableValue(type: Variable, valX: number, valY: number, freeVariableValue: number, typeX: string, typeY: string): number {
+    return typeX === type.toString() ? valX : typeY === type.toString() ? valY : freeVariableValue;
   }
 }
